@@ -16,21 +16,26 @@ namespace Api.Client.Contracts
     using System = global::System;
     
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.9.4.0 (NJsonSchema v10.3.1.0 (Newtonsoft.Json v12.0.0.0))")]
-    public partial interface IClient
+    public partial interface IPingClient
     {
         /// <exception cref="ApiClientException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<string> Ping_PingAsync();
+        System.Threading.Tasks.Task<string> PingAsync();
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <exception cref="ApiClientException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<string> Ping_PingAsync(System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<string> PingAsync(System.Threading.CancellationToken cancellationToken);
     
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.9.4.0 (NJsonSchema v10.3.1.0 (Newtonsoft.Json v12.0.0.0))")]
+    public partial interface IWeatherForecastClient
+    {
         /// <exception cref="ApiClientException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<WeatherForecast>> WeatherForecast_GetAsync();
+        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<WeatherForecast>> GetAsync();
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <exception cref="ApiClientException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<WeatherForecast>> WeatherForecast_GetAsync(System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<WeatherForecast>> GetAsync(System.Threading.CancellationToken cancellationToken);
     
     }
 
